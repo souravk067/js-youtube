@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Async</title>
+    <style>
+      body{
+        background-color: #212121;
+        color: white;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid #e7e7e7;
+      }
+      .project {
+        background-color: #1c1c1c;
+        color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 100vh;
+      }
+      .color {
+        color: aliceblue;
+        display: flex;
+        flex-direction: row;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <h1>Chai aur code</h1> -->
+    <!-- <button id="stop">Stop</button> -->
+
+    <!-- <h1>Start should change the background color every second</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button> -->
+
+    <div class="project">
+      <div id="insert">
+        <div class="key">Press the key and watch magic</div>
+      </div>
+    </div>
+  </body>
+  <script>
+    // const saySourav = function(){
+    //     console.log("Sourav");
+    // }
+    // setTimeout(saySourav, 2000);
+    // console.log("kumar");
+
+    // setTimeout(function(){
+    // document.querySelector('h1').innerHTML = 'best js series'
+    // },2000)
+
+    // const changeText = function () {
+    //   document.querySelector("h1").innerHTML = "best js series";
+    // };
+    // const changeMe = setTimeout(changeText, 2000);
+
+    // document.querySelector('#stop').addEventListener('click', function(){
+    //     clearTimeout(changeMe);
+    //     console.log('stopped');
+    // })
+
+    // const intervalid = setInterval(sayDate, 1000, "hi");
+
+    //    const start = document.querySelector("#start")
+    //     start.addEventListener('click', function(e){
+    //        const sayDate = function(){
+    //         console.log('sourav', Date.now());
+    //        }
+
+    //     const intervalid = setInterval(sayDate, 1000, "hi");
+
+    //     document.querySelector("#stop").addEventListener("click", function () {
+    //       clearInterval(intervalid);
+    //       console.log("STOPPED");
+    //     });
+    // })
+  </script>
+  <script>
+    // generate a random color
+    // const randomColor = function () {
+    //   const hex = "0123456789ABCDEF";
+    //   let color = "#";
+    //   for (let i = 0; i < 6; i++) {
+    //     color += hex[Math.floor(Math.random() * 16)];
+    //   }
+    //   return color;
+    // };
+    // console.log(randomColor());
+
+    // let intervalid;
+    // const startChangingColor = function () {
+    //     if(!intervalid){
+    //   intervalid = setInterval(changeBgColor, 1000);
+    //     }
+
+    //   function changeBgColor() {
+    //     document.querySelector("body").style.backgroundColor = randomColor();
+    //     document.querySelector("body").style.color = randomColor();
+    //   }
+    //   console.log('START');
+    // };
+    // const stopChangingColor = function () {
+    // clearInterval(intervalid);
+    //   intervalid = null
+    //   console.log('STOPPED');
+    // };
+
+    // document
+    //   .getElementById("start")
+    //   .addEventListener("click", startChangingColor);
+    // document
+    //   .getElementById("stop")
+    //   .addEventListener("click", stopChangingColor);
+
+    //     document.querySelector('#start').addEventListener('click', function(){
+    //         const startColor =  setInterval(function(){
+    //         document.querySelector('body').style.backgroundColor = randomColor();
+    //         },1000)
+
+    //     document.querySelector('#stop').addEventListener('click', function(){
+    //         clearInterval(startColor);
+    //         console.log("STOPPED");
+    //     })
+    // })
+  </script>
+
+  <script>
+    const insert = document.getElementById("insert");
+
+    window.addEventListener("keydown", (e) => {
+      insert.innerHTML = `
+      <div class = "color">
+      <table>
+        <tr>
+          <th>Key</th>
+          <th>KeyCode</th>
+          <th>Code</th>
+          </tr>
+          <tr>
+            <td>${e.key === " " ? "Space" : e.key}</td>
+            <td>${e.keyCode}</td>
+            <td>${e.code}</td>
+            </tr>
+            </table>
+            </div>
+      `;
+    });
+  </script>
+</html>
